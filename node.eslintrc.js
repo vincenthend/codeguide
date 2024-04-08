@@ -1,0 +1,70 @@
+const rules = require('./rules/node')
+
+module.exports = {
+  env: {
+    node: true,
+  },
+  parser: '@typescript-eslint/parser',
+  ignorePatterns: ['**/dist/**/*', '**/coverage/**/*', '*.eslintrc.js'],
+  globals: {
+    // ECMAScript
+    ArrayBuffer: 'readonly',
+    Atomics: 'readonly',
+    BigInt: 'readonly',
+    BigInt64Array: 'readonly',
+    BigUint64Array: 'readonly',
+    DataView: 'readonly',
+    Float32Array: 'readonly',
+    Float64Array: 'readonly',
+    Int16Array: 'readonly',
+    Int32Array: 'readonly',
+    Int8Array: 'readonly',
+    Map: 'readonly',
+    Promise: 'readonly',
+    Proxy: 'readonly',
+    Reflect: 'readonly',
+    Set: 'readonly',
+    SharedArrayBuffer: 'readonly',
+    Symbol: 'readonly',
+    Uint16Array: 'readonly',
+    Uint32Array: 'readonly',
+    Uint8Array: 'readonly',
+    Uint8ClampedArray: 'readonly',
+    WeakMap: 'readonly',
+    WeakSet: 'readonly',
+    globalThis: 'readonly',
+    Intl: 'readonly',
+    // Web Standard
+    TextDecoder: 'readonly',
+    TextEncoder: 'readonly',
+    URL: 'readonly',
+    URLSearchParams: 'readonly',
+    WebAssembly: 'readonly',
+    clearInterval: 'readonly',
+    clearTimeout: 'readonly',
+    console: 'readonly',
+    queueMicrotask: 'readonly',
+    setInterval: 'readonly',
+    setTimeout: 'readonly',
+    // Node.js
+    Buffer: 'readonly',
+    GLOBAL: 'readonly',
+    clearImmediate: 'readonly',
+    global: 'readonly',
+    process: 'readonly',
+    root: 'readonly',
+    setImmediate: 'readonly',
+    __dirname: 'readonly',
+    __filename: 'readonly',
+    exports: 'writable',
+    module: 'readonly',
+    require: 'readonly'
+  },
+  parserOptions: {
+    ecmaVersion: 2020,
+  },
+  plugins: [
+    'node'
+  ],
+  rules,
+}
